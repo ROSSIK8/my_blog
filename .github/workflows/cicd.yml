@@ -2,7 +2,7 @@ name: Тестирование приложения
 
 on:
     push:
-        branches: [main]
+        branches: [ci]
 
 
 jobs:
