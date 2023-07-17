@@ -1,0 +1,14 @@
+{% extends "main/base.html" %}
+{% block title %}Статьи на каждый день{% endblock %}
+{% block body %}
+<h1>Категории</h1>
+{% for category_ in categories %}
+<a href="http://127.0.0.1:8000/articles/?category={{category_.title}}">{{category_.title}}</a>
+{% endfor %}<br>
+<br>
+<hr>
+<h2>{{category.title}}</h2>
+{% for article in category.articles.all %}
+<a href="http://127.0.0.1:8000/article/{{article.title}}">{{article.title}}</a><br>
+{% endfor %}<br>
+{% endblock %}

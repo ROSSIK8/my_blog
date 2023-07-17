@@ -1,0 +1,9 @@
+{% extends "main/base.html" %}
+{% block title %}{{article.title}}{% endblock %}
+{% block body %}
+<h1>{{article.title}}</h1>
+<hr>
+<img src="{{ article.image }}" height="300" alt="">
+<p>{{article.text}}</p><br>
+<a href="#" onclick="history.back();return false;" >Назад</a>
+{% endblock %}
