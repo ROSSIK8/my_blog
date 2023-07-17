@@ -1,4 +1,6 @@
 django
 gunicorn
 python-dotenv
-
+flake8
+djangorestframework
+psycopg2

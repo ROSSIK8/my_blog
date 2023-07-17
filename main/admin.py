@@ -8,11 +8,5 @@ class ArticleAdmin(admin.ModelAdmin):
 
 
 @admin.register(Category)
-class ArticleAdmin(admin.ModelAdmin):
+class CategoryAdmin(admin.ModelAdmin):
     list_display = ['title']
-
-
-# @admin.register(CategoryArticle)
-# class ArticleAdmin(admin.ModelAdmin):
-#     list_display = ['article', 'category']
-

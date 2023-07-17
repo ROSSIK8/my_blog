@@ -2,7 +2,8 @@ from django.db import models
 
 
 class Article(models.Model):
-    title = models.CharField(max_length=200, verbose_name='Название')
+    title = models.CharField(max_length=200,
+                             verbose_name='Название')
     image = models.CharField(max_length=1000)
     text = models.TextField(null=True)
 
@@ -16,8 +17,11 @@ class Article(models.Model):
 
 
 class Category(models.Model):
-    title = models.CharField(max_length=256, verbose_name='Название', null=True)
-    articles = models.ManyToManyField(Article, related_name='category')
+    title = models.CharField(max_length=256,
+                             verbose_name='Название',
+                             null=True)
+    articles = models.ManyToManyField(Article,
+                                      related_name='category')
 
     class Meta:
         verbose_name = 'Категория'
@@ -25,14 +29,3 @@ class Category(models.Model):
 
     def __str__(self):
         return self.title
-
-#
-# class ArticleTags(models.Model):
-#     article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='scopes')
-#     tag = models.ForeignKey(Tag, verbose_name='Раздел', on_delete=models.CASCADE, related_name='scopes')
-#     is_main = models.BooleanField(verbose_name='Основной')
-
-
-
-
-
